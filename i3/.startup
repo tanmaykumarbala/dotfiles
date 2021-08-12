@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# figlet -k "CLI !."
+neofetch
+# figlet -k "TKB !."

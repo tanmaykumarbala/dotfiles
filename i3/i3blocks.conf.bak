@@ -1,0 +1,94 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+# separator_block_width=20
+
+[greetings]
+command=echo "$USER!"
+interval=once
+color=#01A7B7
+
+
+[volume-pulseaudio]
+label= 
+command=$HOME/.config/i3/i3blocks-contrib/volume/volume
+interval=1
+signal=10
+color=#FECB20
+
+[bluetooth]
+label= 
+command=$HOME/.config/i3/bluetooth.sh
+interval=30
+color=#84D0C4
+
+[Home]
+label= 
+command=$HOME/.config/i3/i3blocks-contrib/disk/disk
+DIR=/home/tanmay
+interval=30
+color=F63B34
+
+[vpn]
+label= 
+command=$HOME/.config/i3/iface_IP2
+interval=1
+separator=true
+color=#519D90
+
+[vpn]
+label= 
+command=$HOME/.config/i3/iface_IP
+color=#00B2FF
+interval=1
+separator=true
+color=#519D90
+
+[essid]
+label= 
+command=$HOME/.config/i3/i3blocks-contrib/essid/essid
+interval=5
+INTERFACE=wlo1
+color=#E69675
+
+[battery]
+# color=#E55151
+# command=$HOME/.config/i3/i3blocks-contrib/battery/battery
+command=echo "<span background='#E55151' foreground='black'><b> `battery` </b></span>"
+interval=30
+markup=pango
+
+[time]
+# label= 
+# command=date '+%I:%M %p '
+# color=#FFB740
+command=echo "<span background='#FFB740' foreground='black'><b>  `date +'I:%M %p'` </b></span>"
+interval=1
+markup=pango
+
+[date]
+command=echo "<span background='#5D9B84' foreground='black'><b>  `date +'%B:%d'` </b></span>"
+# label= 
+# command=date '+%B %d'
+# color=#5D9B84
+interval=1
+markup=pango
+
+# [test]
+# full_text=<span background="red" foreground="white">Salut</span>
+# markup=pango
+
+[documentation]
+# full_text=Github 
+full_text=<span background="#DE7E44" foreground="black"> Github </span>
+website=https://github.com/tanmaykumarbala
+command=xdg-open "$website"
+# color=#DE7E44
+markup=pango
